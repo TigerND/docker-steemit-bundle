@@ -12,7 +12,7 @@ RUN ( \
 
 ADD babelrc.diff /root/steemit/babelrc.diff
 
-RUN cd /root/steemit/ ; \
+RUN cd /root/steemit/; \
     ( \
         cat babelrc.diff && \
         patch <babelrc.diff \
@@ -32,9 +32,17 @@ ADD config.json /root/steemit/config.json.sample
 
 ADD run-steemit.sh /root/steemit/ 
 
+ADD server.diff /root/steemit/server/server.js.diff
+
+RUN cd /root/steemit/; \
+    ( \
+        cat server/server.js.diff && \
+        patch <server/server.js.diff \
+    )
+    
 RUN ls -l /root/steemit
 
-EXPOSE 80 3000 3001
+EXPOSE 80
 
 VOLUME ["/root/steemit/data"]
 
