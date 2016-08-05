@@ -1,0 +1,16 @@
+{
+    "development": {
+        "username": null,
+        "password": null,
+        "host": null,
+        "database": "/root/steemit/steemit.sqlite.empty",
+        "dialect": "sqlite"
+    },
+    "production": {
+        "username": null,
+        "password": null,
+        "host": null,
+        "database": "/root/steemit/steemit.sqlite.empty",
+        "dialect": "sqlite"
+    }
+}

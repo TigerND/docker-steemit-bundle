@@ -1,0 +1,25 @@
+--- .babelrc.orig	2016-08-05 10:57:00.000000000 +0300
++++ .babelrc	2016-08-05 16:27:46.478148435 +0300
+@@ -1,7 +1,10 @@
+ {
+   "presets": ["es2015", "stage-0", "react"],
+-  "plugins": "transform-runtime",
+-  "env": {
++    "plugins": [
++        "transform-regenerator",
++        "transform-async-to-generator",
++    ],
++    "env": {
+       "browser": {
+         "plugins": [["react-transform", {
+           "transforms": [
+@@ -12,6 +15,9 @@
+               "redbox-react"
+             ]
+           }]
++        }], ["transform-runtime", {
++            "polyfill": false,
++            "regenerator": true
+         }]]
+       }
+     }
