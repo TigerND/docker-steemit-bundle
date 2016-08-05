@@ -4,6 +4,12 @@ MAINTAINER Aleksandr Zykov <tiger@mano.email>
 
 RUN figlet 'Building'
 
+RUN ( \
+        apt-get install -qy --no-install-recommends \
+            socat \
+    ) && \
+    apt-get clean -qy
+
 ADD babelrc.diff /root/steemit/babelrc.diff
 
 RUN cd /root/steemit/ ; \
@@ -24,13 +30,11 @@ RUN cd /root/steemit/db; \
 
 ADD config.json /root/steemit/config.json.sample
 
-ENV PORT 3000
-
 ADD run-steemit.sh /root/steemit/ 
 
 RUN ls -l /root/steemit
 
-EXPOSE 3000 3001
+EXPOSE 80 3000 3001
 
 VOLUME ["/root/steemit/data"]
 
