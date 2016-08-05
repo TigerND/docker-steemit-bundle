@@ -4,6 +4,8 @@ MAINTAINER Aleksandr Zykov <tiger@mano.email>
 
 RUN figlet 'Building'
 
+ENV NODE_ENV production
+
 RUN ( \
         apt-get install -qy --no-install-recommends \
             socat \
