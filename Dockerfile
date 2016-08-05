@@ -34,10 +34,10 @@ ADD run-steemit.sh /root/steemit/
 
 ADD server.js.diff /root/steemit/server/server.js.diff
 
-RUN cd /root/steemit/; \
+RUN cd /root/steemit/server/; \
     ( \
-        cat server/server.js.diff && \
-        patch <server/server.js.diff \
+        cat server.js.diff && \
+        patch <server.js.diff \
     )
     
 RUN ls -l /root/steemit

@@ -1,5 +1,5 @@
---- server/server.js.orig	2016-07-30 20:24:58.594831016 +0300
-+++ server/server.js	2016-08-05 22:09:15.016312855 +0300
+--- server.js.orig	2016-07-30 20:24:58.594831016 +0300
++++ server.js	2016-08-05 22:09:15.016312855 +0300
 @@ -115,7 +115,7 @@
  
      const argv = minimist(process.argv.slice(2));
