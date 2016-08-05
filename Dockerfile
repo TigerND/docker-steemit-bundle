@@ -32,7 +32,7 @@ ADD config.json /root/steemit/config.json.sample
 
 ADD run-steemit.sh /root/steemit/ 
 
-ADD server.diff /root/steemit/server/server.js.diff
+ADD server.js.diff /root/steemit/server/server.js.diff
 
 RUN cd /root/steemit/; \
     ( \
