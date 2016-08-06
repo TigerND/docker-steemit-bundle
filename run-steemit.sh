@@ -17,4 +17,4 @@ socat TCP-LISTEN:80,reuseaddr,fork TCP:127.0.0.1:3000 &
 export PORT=3000
 
 cd /root/steemit
-npm run prod $*
+npm start $*

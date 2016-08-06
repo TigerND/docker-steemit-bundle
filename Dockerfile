@@ -26,7 +26,7 @@ ADD run-steemit.sh /root/steemit/
 
 RUN ls -l /root/steemit
 
-EXPOSE 80
+EXPOSE 80 3000
 
 VOLUME ["/root/steemit/data"]
 
