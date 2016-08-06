@@ -15,5 +15,4 @@ fi
 socat TCP-LISTEN:3000,reuseaddr,fork TCP:127.0.0.1:3002 &
 
 cd /root/steemit
-
-PORT=3002 npm start $*
+npm start $*
