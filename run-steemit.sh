@@ -12,9 +12,8 @@ if [[ ! -f /root/steemit/data/steemit.sqlite ]]; then
     cp /root/steemit/steemit.sqlite.empty /root/steemit/data/steemit.sqlite
 fi
 
-socat TCP-LISTEN:80,reuseaddr,fork TCP:127.0.0.1:3000 &
-
-export PORT=3000
+socat TCP-LISTEN:3000,reuseaddr,fork TCP:127.0.0.1:3002 &
 
 cd /root/steemit
-npm start $*
+
+PORT=3002 npm start $*
